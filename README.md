@@ -1,5 +1,36 @@
 # Stock Price Prediction Using LSTM
 
+### Problem Statement
+
+Predicting stock price movements is critical for traders and investors aiming to optimize their strategies. However, converting predictions into profitable trading strategies remains a challenge due to market volatility and transaction costs.
+
+### Solution Approach
+
+Data: Historical stock price data for PayPal, including open, high, low, close (OHLC) prices, and trading volumes.
+
+Methods:
+
+- Implemented a Long Short-Term Memory (LSTM) neural network to capture temporal dependencies in the stock price time series.
+- Preprocessed data by normalizing prices and splitting it into training and testing datasets.
+- Evaluated performance using Mean Squared Error (MSE) and Mean Absolute Error (MAE).
+- Simulated a trading strategy based on predictions to assess profitability.
+- Tools: Python (TensorFlow, Keras, NumPy, Matplotlib).
+
+### Results
+
+- Achieved a strong correlation between predicted and actual stock prices with minimal error rates.
+- The trading strategy, while technically accurate in predicting movements, incurred losses due to transaction costs and market noise.
+
+### Key Insights
+
+- LSTM models excel at predicting price trends but require additional optimization to ensure profitability in trading.
+- Highlighted the importance of incorporating risk management techniques in trading strategies.
+
+### Future Directions
+
+- Combine LSTM predictions with reinforcement learning to optimize trading strategies.
+- Incorporate external factors like news sentiment or macroeconomic indicators for improved prediction accuracy.
+
 ## Overview
 
 This project implements a Long Short-Term Memory (LSTM) neural network model to predict the stock price movement of PayPal (PYPL) using historical stock data. The model leverages the power of LSTMs, which are well-suited for time series forecasting tasks due to their ability to learn long-term dependencies in sequential data.
