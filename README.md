@@ -46,13 +46,13 @@ Trading Strategy:
 
 ### Evaluation Metrics
 
-    MAE: The mean absolute error is approximately $6.77, meaning the model's predictions are, on average, $6.77 away from the actual closing prices.
-    R²: The R² value of approximately 0.97 shows that the model explains 97% of the variance in stock prices.
+- MAE: The mean absolute error is approximately $6.77, meaning the model's predictions are, on average, $6.77 away from the actual closing prices.
+- R²: The R² value of approximately 0.97 shows that the model explains 97% of the variance in stock prices.
 
 ### Backtesting Strategy
 
-    Initial Balance: $10,000
-    Result: A loss of approximately $118.62, suggesting the need for a more sophisticated strategy that accounts for market conditions and transaction costs.
+- Initial Balance: $10,000
+- Result: A loss of approximately $118.62, suggesting the need for a more sophisticated strategy that accounts for market conditions and transaction costs.
 
 ### Future Directions
 
