@@ -2,65 +2,61 @@
 
 ### Problem Statement
 
-Predicting stock price movements is critical for traders and investors aiming to optimize their strategies. However, converting predictions into profitable trading strategies remains a challenge due to market volatility and transaction costs.
+Predicting stock price movements is crucial for traders and investors seeking to optimize their trading strategies. However, transforming predictions into profitable strategies remains challenging due to market volatility, transaction costs, and unpredictable market fluctuations.
 
 ### Solution Approach
 
-Data: Historical stock price data for PayPal, including open, high, low, close (OHLC) prices, and trading volumes.
+This project leverages a Long Short-Term Memory (LSTM) neural network to forecast stock price movements. The goal is to capture temporal dependencies within the stock price time series, specifically focusing on predicting PayPal (PYPL) stock price fluctuations.
 
-Methods:
+### ## Dataset Information
 
-- Implemented a Long Short-Term Memory (LSTM) neural network to capture temporal dependencies in the stock price time series.
-- Preprocessed data by normalizing prices and splitting it into training and testing datasets.
-- Evaluated performance using Mean Squared Error (MSE) and Mean Absolute Error (MAE).
-- Simulated a trading strategy based on predictions to assess profitability.
-- Tools: Python (TensorFlow, Keras, NumPy, Matplotlib).
+The project uses the yfinance library to download historical stock price data for PayPal from January 1, 2015, to January 1, 2023, including:
+
+- Open, high, low, close (OHLC) prices
+- Trading volumes
+
+### Methods
+
+- Data Preprocessing: Prices are normalized using MinMaxScaler, and the dataset is split into training and testing sets.
+- Model: An LSTM neural network is used to capture temporal dependencies and predict future stock prices.
+- Performance Evaluation: The model is evaluated using Mean Squared Error (MSE) and Mean Absolute Error (MAE) to assess prediction accuracy.
+- Backtesting Strategy: A basic trading strategy is simulated based on the model's predictions to assess profitability.
 
 ### Results
 
-- Achieved a strong correlation between predicted and actual stock prices with minimal error rates.
-- The trading strategy, while technically accurate in predicting movements, incurred losses due to transaction costs and market noise.
+The LSTM model showed strong correlation between predicted and actual stock prices with minimal error rates.
+
+Model Accuracy:
+
+- Mean Absolute Error (MAE): 6.77 (average deviation from actual closing prices).
+- R-squared (R²): 0.97 (indicating that the model explains 97% of the variance in stock prices).
+
+Trading Strategy:
+
+- The backtesting simulation showed a loss of approximately $118.62 from an initial balance of $10,000, highlighting the challenges of trading strategies based solely on price predictions.
+- Despite accurate price predictions, the simplistic strategy failed to generate profits due to transaction costs and market noise.
 
 ### Key Insights
 
-- LSTM models excel at predicting price trends but require additional optimization to ensure profitability in trading.
-- Highlighted the importance of incorporating risk management techniques in trading strategies.
+- LSTM Model Performance: The LSTM model is effective for predicting stock price trends, but additional optimizations are needed to ensure profitability in trading scenarios.
+
+- Challenges in Trading Strategy: The backtesting results show that trading strategies based solely on price predictions may not be profitable without more refined strategies and proper risk management.
+
+- Risk Management: This project highlights the importance of incorporating transaction costs and market volatility when developing a trading strategy.
+
+### Evaluation Metrics
+
+    MAE: The mean absolute error is approximately $6.77, meaning the model's predictions are, on average, $6.77 away from the actual closing prices.
+    R²: The R² value of approximately 0.97 shows that the model explains 97% of the variance in stock prices.
+
+### Backtesting Strategy
+
+    Initial Balance: $10,000
+    Result: A loss of approximately $118.62, suggesting the need for a more sophisticated strategy that accounts for market conditions and transaction costs.
 
 ### Future Directions
 
-- Combine LSTM predictions with reinforcement learning to optimize trading strategies.
-- Incorporate external factors like news sentiment or macroeconomic indicators for improved prediction accuracy.
-
-## Overview
-
-This project implements a Long Short-Term Memory (LSTM) neural network model to predict the stock price movement of PayPal (PYPL) using historical stock data. The model leverages the power of LSTMs, which are well-suited for time series forecasting tasks due to their ability to learn long-term dependencies in sequential data.
-
-## Dataset Information
-- The project uses the yfinance library to download historical stock price data for PayPal from January 1, 2015, to January 1, 2023.
-  
-### Key Features:
-- Data Preprocessing: The stock prices are scaled using MinMaxScaler, and sequences are created for LSTM input.
-- Model Training: An LSTM model is built and trained to predict future stock prices based on past price sequences.
-- Evaluation Metrics: The model's performance is evaluated using Mean Absolute Error (MAE) and R-squared (R²).
-- Backtesting Strategy: A simple backtesting strategy simulates trading based on the model's predictions and evaluates the final balance.
-
-### Insuights from the Output
-
-1. Mean Absolute Error (MAE):
-
-The value of 6.77 indicates that the model's predictions are, on average, about $6.77 off from the actual closing prices. This shows a reasonable level of accuracy for a stock price prediction model.
-
-2. R-squared (R²):
-
-An R² value of approximately 0.97 suggests that the model explains about 97% of the variance in the stock prices. This high value indicates a strong fit and suggests that the model is capturing the underlying trends in the stock price movements effectively.
-
-3. Backtesting Result:
-
-The backtesting outcome indicates a loss of about $118.62 from an initial balance of $10,000. This suggests that while the model predicts stock prices well, the trading strategy based on those predictions may not be profitable. This could be due to the simplistic trading logic used in the backtesting phase, and it highlights the need for a more refined strategy.
-
-### Future Work
-
-- Implement advanced trading strategies and incorporate transaction costs.
-- Explore feature engineering by adding more indicators (e.g., moving averages, RSI).
-- Experiment with different LSTM architectures or other machine learning algorithms to improve predictions.
-- Conduct further backtesting across different market conditions to evaluate the robustness of the trading strategy.
+- Advanced Trading Strategies: Incorporate more sophisticated trading logic and include transaction costs to refine the profitability of the model.
+- Feature Engineering: Add more technical indicators (e.g., moving averages, RSI) to improve prediction accuracy.
+- Model Enhancement: Experiment with different LSTM architectures, such as bidirectional LSTMs or other machine learning algorithms, to improve forecasting.
+- Backtesting in Diverse Market Conditions: Perform further backtesting across various market conditions to assess the robustness of the trading strategy.
