@@ -8,7 +8,7 @@ Predicting stock price movements is crucial for traders and investors seeking to
 
 This project leverages a Long Short-Term Memory (LSTM) neural network to forecast stock price movements. The goal is to capture temporal dependencies within the stock price time series, specifically focusing on predicting PayPal (PYPL) stock price fluctuations.
 
-### ## Dataset Information
+### Dataset Information
 
 The project uses the yfinance library to download historical stock price data for PayPal from January 1, 2015, to January 1, 2023, including:
 
