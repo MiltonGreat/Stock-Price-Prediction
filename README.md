@@ -1,12 +1,12 @@
-# Stock Price Prediction Using LSTM
+# Stock Price Prediction using LSTM for PayPal (PYPL)
 
 ### Problem Statement
 
-Predicting stock price movements is crucial for traders and investors seeking to optimize their trading strategies. However, transforming predictions into profitable strategies remains challenging due to market volatility, transaction costs, and unpredictable market fluctuations.
+Predicting stock price movements is crucial for traders and investors aiming to optimize their trading strategies. However, transforming predictions into profitable trading strategies remains challenging due to factors such as market volatility, transaction costs, and unpredictable fluctuations in the market.
 
 ### Solution Approach
 
-This project leverages a Long Short-Term Memory (LSTM) neural network to forecast stock price movements. The goal is to capture temporal dependencies within the stock price time series, specifically focusing on predicting PayPal (PYPL) stock price fluctuations.
+This project leverages a Long Short-Term Memory (LSTM) neural network to forecast PayPal's (PYPL) stock price fluctuations. The objective is to capture temporal dependencies within the stock price time series data, providing a model capable of predicting future price trends.
 
 ### Dataset Information
 
@@ -24,35 +24,35 @@ The project uses the yfinance library to download historical stock price data fo
 
 ### Results
 
-The LSTM model showed strong correlation between predicted and actual stock prices with minimal error rates.
+The LSTM model showed a high correlation between predicted and actual stock prices, with minimal error rates, although the basic backtesting strategy didn't yield a profit.
 
-Model Accuracy:
+### Model Accuracy:
 
-- Mean Absolute Error (MAE): 6.77 (average deviation from actual closing prices).
-- R-squared (R²): 0.97 (indicating that the model explains 97% of the variance in stock prices).
+- Mean Absolute Error (MAE): 7.81 (average deviation from actual closing prices).
+- R-squared (R²): 0.96 (indicating that the model explains 97% of the variance in stock prices).
 
 Trading Strategy:
 
-- The backtesting simulation showed a loss of approximately $118.62 from an initial balance of $10,000, highlighting the challenges of trading strategies based solely on price predictions.
-- Despite accurate price predictions, the simplistic strategy failed to generate profits due to transaction costs and market noise.
+- The backtesting simulation showed a final balance of $62.28 was achieved from an initial balance of $10,000, highlighting the challenges of trading strategies based solely on price predictions.
+- This result suggests a modest profit, indicating that the model can generate positive returns, although the trading strategy is quite simplistic.
 
 ### Key Insights
 
-- LSTM Model Performance: The LSTM model is effective for predicting stock price trends, but additional optimizations are needed to ensure profitability in trading scenarios.
+- LSTM Model Performance: The LSTM model performs well in predicting stock price trends, with high accuracy (R² of 0.96). However, improvements are needed in the trading strategy for better profitability.
 
-- Challenges in Trading Strategy: The backtesting results show that trading strategies based solely on price predictions may not be profitable without more refined strategies and proper risk management.
+- Challenges in Trading Strategy: The backtesting results reveal that a simple buy/sell strategy based purely on price predictions can be vulnerable to transaction costs, market volatility, and noise, which can erode profits.
 
-- Risk Management: This project highlights the importance of incorporating transaction costs and market volatility when developing a trading strategy.
+- Risk Management: The project underscores the need for more sophisticated risk management techniques when designing trading strategies. Factors like transaction fees and market conditions should be carefully incorporated.
 
 ### Evaluation Metrics
 
-- MAE: The mean absolute error is approximately $6.77, meaning the model's predictions are, on average, $6.77 away from the actual closing prices.
-- R²: The R² value of approximately 0.97 shows that the model explains 97% of the variance in stock prices.
+- MAE: The mean absolute error is approximately $7.81, meaning the model's predictions are, on average, $7.81 away from the actual closing prices.
+- R²: The R² value of approximately 0.96 shows that the model explains 97% of the variance in stock prices.
 
 ### Backtesting Strategy
 
 - Initial Balance: $10,000
-- Result: A loss of approximately $118.62, suggesting the need for a more sophisticated strategy that accounts for market conditions and transaction costs.
+- Result: A loss of approximately $62.28, suggesting the need for a more sophisticated strategy that accounts for market conditions and transaction costs.
 
 ### Future Directions
 
